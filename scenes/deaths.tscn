@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://di1u70h2ai43u"]
+
+[ext_resource type="Texture2D" uid="uid://bnbgxmqsyw88n" path="res://assests/sprites/Skull 0021.png" id="1_rrtur"]
+[ext_resource type="FontFile" uid="uid://dmkyb2tt54dmy" path="res://assests/fonts/PixelOperator8-Bold.ttf" id="2_pjiro"]
+
+[node name="Control" type="Control" unique_id=432113585]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2030613241]
+position = Vector2(5.9604645e-08, -5.9604645e-08)
+scale = Vector2(0.6796875, 0.6796875)
+texture = ExtResource("1_rrtur")
+
+[node name="Label" type="Label" parent="." unique_id=2022374437]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -4.0
+offset_right = 16.0
+offset_bottom = 4.0
+theme_override_fonts/font = ExtResource("2_pjiro")
+theme_override_font_sizes/font_size = 8
+text = "0"

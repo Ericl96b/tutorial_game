@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://btjdqmctfa0yn"]
+
+[ext_resource type="Script" uid="uid://yor25kve3yh" path="res://scripts/beer_bottle.gd" id="1_dy274"]
+[ext_resource type="Texture2D" uid="uid://b0a6fsehno5mq" path="res://assests/sprites/beerbottle.png" id="2_bauyg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjd3x"]
+size = Vector2(9, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsw0s"]
+size = Vector2(13.25, 28.25)
+
+[node name="beer_bottle" type="CharacterBody2D" unique_id=990973255]
+scale = Vector2(0.38579065, 0.4310611)
+script = ExtResource("1_dy274")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=244254895]
+texture = ExtResource("2_bauyg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1593462450]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_rjd3x")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=270484810]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2001782888]
+position = Vector2(-0.625, 0.875)
+shape = SubResource("RectangleShape2D_dsw0s")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
